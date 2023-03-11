@@ -1,0 +1,50 @@
+function App(){
+  return(
+    <h1 style={{backgroundColor: "red"}}>Welcome, To react</h1>
+  )
+}
+
+const internalStyle = {
+  backgroundColor: "yellow",
+  padding: "2rem"
+}
+
+const Calc = () => <h1 style={internalStyle}>coming from es6 function</h1>
+
+export { Calc }
+export default App
+
+
+ <div>
+   
+
+    <Slider
+    autoplay={true}
+    autoplaySpeed={1000}
+    dots={true}
+    arrows={true}
+    easing={"ease-in-out"}
+    >
+     
+    <div className='d-flex justify-content-around py-4 align-items-center'>
+        <h1>Welcome</h1>
+        <img src={img1} alt="banner one" />
+    </div>
+
+    <div className='d-flex justify-content-around py-4 align-items-center'>
+        <h1>MarketPlace</h1>
+        <img src={img2} alt="banner one" />
+    </div>
+
+    <div className='d-flex justify-content-around py-4 align-items-center'>
+        <h1>Easy Sell And Buy</h1>
+        <img src={img3} alt="banner one" />
+    </div>
+
+   
+
+
+    </Slider>
+
+    </div>
+

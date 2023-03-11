@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.footer{
+    background-color: #393939;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
