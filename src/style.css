@@ -7,8 +7,13 @@
 
 .footer{
     background-color: #393939;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    
 }
 
+.banner{
+    background-image: url("./assets/banngerbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    padding: 5rem 0;
+}

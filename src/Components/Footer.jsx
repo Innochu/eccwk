@@ -5,6 +5,11 @@ import { AiFillTwitterCircle } from "react-icons/ai"
 import { FiLinkedin } from "react-icons/fi"
 import { Link } from 'react-router-dom'
 
+import visa from "./../assets/visa.png"
+import master from "./../assets/master.png"
+import cash from "./../assets/cash.png"
+import installment from "./../assets/easyinstallment.png"
+
 function Footer() {
   return (
     <div className='footer'>
@@ -35,10 +40,33 @@ function Footer() {
                     <Link className='d-block nav-link' to="/">Installment</Link>
 
                 </div>
-                <div className="col-md-3 col-6"></div>
-                <div className="col-md-3 col-6"></div>
+                <div className="col-md-3 col-6 text-white p-4">
+                <p className='text-info'>Information</p>
+                    <Link className='d-block nav-link' to="/">About Us</Link>
+                    <Link className='d-block nav-link' to="/">FAQ</Link>
+                    <Link className='d-block nav-link' to="/">Shipping & Return</Link>
+                    <Link className='d-block nav-link' to="/">Privacy Policy</Link>
+                    <Link className='d-block nav-link' to="/">Terms and condition</Link>
+                </div>
+                <div className="col-md-3 col-6 text-white p-4">
+                <p className='text-info'>Customer Care</p>
+                    <Link className='d-block nav-link' to="/">About Us</Link>
+                    <Link className='d-block nav-link' to="/">FAQ</Link>
+                    <Link className='d-block nav-link' to="/">Shipping & Return</Link>
+                    <Link className='d-block nav-link' to="/">Privacy Policy</Link>
+                    <Link className='d-block nav-link' to="/">Terms and condition</Link>
+                </div>
             </div>
         </div>
+
+        <div className='d-flex justify-content-end gap-2 p-3'>
+            <img src={visa} alt="" />
+            <img src={master} alt="" />
+            <img src={cash} alt="" />
+            <img src={installment} alt="" />
+        </div>
+
+        <div className="small bg-dark text-white px-4 py-1">&copy; {new Date().getFullYear()} Winstore All Right Reserved</div>
 
     </div>
   )
