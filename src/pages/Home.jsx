@@ -7,10 +7,11 @@ import cat2 from "./../assets/fashion.png"
 import cat3 from "./../assets/appliances.png"
 import cat4 from "./../assets/baby.png"
 
-import product1 from "./../assets/phone.png"
-import product2 from "./../assets/cord.png"
-import product3 from "./../assets/phone.png"
+import { BsCart} from "react-icons/bs"
 
+import { Link } from 'react-router-dom'
+
+import products from '../Components/product'
 
 
 
@@ -64,20 +65,7 @@ function Home() {
 
   ]
   
-  const products = [
-    {
-      img: product1,
-      price: 500
-    },
-    {
-      img: product2,
-      price: 1500
-    },
-    {
-      img: product3,
-      price: 750
-    },
-  ]
+ 
 
   return (
     <div className="home">
@@ -115,7 +103,13 @@ function Home() {
 
       <div className="categories">
         <div className="container">
-          <Slider slidesToShow={3} arrows={true} prevArrow={<GrPrevious size={32}/>} nextArrow={<GrNext size={32}/>}>
+          <Slider 
+          slidesToShow={3}
+           arrows={true} 
+           prevArrow={<GrPrevious size={32}/>} 
+           nextArrow={<GrNext size={32}
+           
+           />}>
             {categories?.map((cat, i) =>(
               <div key={i} className=" position-relative p-3 w-100">
                 <img src={cat?.img} alt="" className='w-100 img-thumbnail'/>
@@ -130,20 +124,25 @@ function Home() {
         </div>
       </div>
 
-      <div className="dods">
-        <div className="container">
-          <Slider slidesToShow={3}>
-          <div>
+      <div className="dods p-5">
+        <div className="container ">
+          <Slider slidesToShow={3} >
+          <div className='me-4'>
               <h4>DEALS OF THE <br /> DAY</h4>
               <p>Lorem ipsum dolor sit amet consectetur.</p>
               <button className="btn btn-sm btn-info">View More</button>
             </div>
 
-            {products?.map((product) =>(
-              <div>
-                <img src={product?.img} alt="" />
-                  <p>{product?.price}</p>
-              </div>
+            {products?.map((product, i) =>(
+              <Link to={`/details/${product?.id}`} key={i} className=''>
+                <img src={product?.img} alt="" className='d-block m-auto' />
+                 <div className='d-flex justify-content-around align-items-center '>
+                 <p className=''>{product?.price}</p>
+                  <button className="btn btn-secondary">
+                    <BsCart/>
+                  </button>
+                 </div>
+              </Link>
             ))}
           </Slider>
         </div>

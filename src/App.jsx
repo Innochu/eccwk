@@ -7,6 +7,7 @@ const Home = lazy(() => import("./pages/Home"))
 const About = lazy(() => import("./pages/About")) 
 const Contact = lazy(() => import("./pages/Contact")) 
 const NotFound = lazy(() => import("./pages/NotFound")) 
+const Details = lazy(() => import("./pages/Details")) 
 
 import { Spinner } from 'reactstrap'
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/details/:id" element={<Details/>}/>
         <Route path="*" element={<NotFound/>} />
       </Routes>
 
