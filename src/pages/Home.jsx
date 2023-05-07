@@ -14,8 +14,12 @@ import { Link } from 'react-router-dom'
 import products from '../Components/product'
 
 
+import { useSelector } from 'react-redux'
+
 
 function Home() {
+
+
 
   const datas = [
     {
@@ -99,6 +103,7 @@ function Home() {
         </Slider>
         </div>
       </div>
+
 
 
       <div className="categories">
