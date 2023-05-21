@@ -16,6 +16,8 @@ const handleSubmit = (e) =>{
     const pwd = data.get("pwd")
     const photo = data.get("photo")
 
+  
+
     dispatch(checkLogin())
     dispatch(getUser({fname, lname, email, pwd, photo}))
     navigate("/")

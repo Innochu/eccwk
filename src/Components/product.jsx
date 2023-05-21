@@ -3,7 +3,7 @@ import product1 from "./../assets/phone.png"
 import product2 from "./../assets/cord.png"
 import product3 from "./../assets/phone.png"
 
-const products = [
+const productts = [
     {
       img: product1,
       price: 500,
@@ -21,4 +21,4 @@ const products = [
     },
   ]
 
-  export default products
+  export default productts
